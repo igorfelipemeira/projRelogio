@@ -13,41 +13,41 @@ public class Relogio {
 
     public int getHora() {
         if (minuto >= 60) {
-            return hora = hora + 1;
-        } else {
-            if (hora < 24) {
-                return hora = hora + 1;
-            } else {
+            hora = hora + 1;
+        }
+        if (hora < 24) {
                 return hora;
+            } else {
+                return hora=hora-24;
 
             }
         }
 
-    }
+    
 
     public int getMinuto() {
         if (segundo >= 60) {
-            return minuto = minuto + 1;
-        } else {
-            if (minuto < 60) {
+            minuto = minuto + 1;
+        }
+        if (minuto < 60) {
                 return minuto;
             } else {
                 return minuto = minuto - 60;
             }
         }
-    }
+    
 
     public int getSegundo() {
         if (segundo < 60) {
             return segundo;
         } else {
-            return segundo = segundo - 60;
+            return segundo = (segundo - 60);
         }
 
     }
 
     public void setHoraAtual() {
-        System.out.println("Hora atual: " + hora + ":" + minuto + ":" + segundo);
+        System.out.println("Hora atual: " + getHora() + ":" + getMinuto() + ":" + getSegundo());
 
     }
 
